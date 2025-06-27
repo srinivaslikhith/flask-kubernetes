@@ -7,14 +7,13 @@ spec:
   selector:
     matchLabels:
       app: flask
-    template:
-      metadata:
-        labels:
-          app: flask
-      spec:
-        containers:
-        -name: flask
-        image: srinivas/flask-redis:latest
+  template:
+    metadata:
+      labels:
+        app: flask
+    spec:
+      containers:
+      - name: flask
+        image: srinivaslikhith/flask-app:latest
         ports:
         - containerPort: 8000
-
